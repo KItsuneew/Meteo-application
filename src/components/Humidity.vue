@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-	weatherInfo: {
+	humid: {
 		type: [Object, null],
 		required: true,
 	},
@@ -14,7 +14,7 @@ const props = defineProps({
 			<div class="block-bottom-texts">
 				<div class="block-bottom-text-block">
 					<div class="block-bottom-text-block-title">
-						Humidity: {{ weatherInfo?.main?.humidity }} %
+						Humidity: {{ humid }} %
 					</div>
 					<div class="block-bottom-text-block-desc">
 						Humidity is the concentration of water vapor present in the air.

@@ -33,8 +33,10 @@ const props = defineProps({
 				<div class="card-small">
 					<div class="card-small-title">Wind gusts</div>
 					<div class="card-small-info">
-						<div class="card-small-data">
-							<div class="info-main-num">{{ weatherInfo?.wind?.gust }}</div>
+						<div v-if="weatherInfo?.wind?.gust" class="card-small-data">
+							<div class="info-main-num">
+								{{ Math.round(weatherInfo?.wind?.gust) }}
+							</div>
 							<div class="info-main-text">m/s</div>
 						</div>
 						<div class="card-small-hint">
